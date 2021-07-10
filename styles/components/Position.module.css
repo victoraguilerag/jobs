@@ -1,0 +1,154 @@
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  padding-left: 18px;
+  position: relative;
+  scroll-snap-align: center;
+}
+
+.position {
+  color: #565151;
+  margin-top: 24px;
+}
+
+.positionCard {
+  width: 100px;
+  height: 100px;
+
+  font-size: 40px;
+  font-weight: bold;
+
+  border-radius: 4px;
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
+
+  animation: hover ease 6s forwards infinite;
+  animation: spin ease-in-out 20s infinite forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  45% {
+    transform: rotate(360deg);
+  }
+  54% {
+    transform: rotate(350deg);
+  }
+  56% {
+    transform: rotate(375deg);
+  }
+  58% {
+    transform: rotate(350deg);
+  }
+  60% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: attr(data-textColor);
+}
+
+.separator {
+  width: calc(100% + 18px);
+  height: 6px;
+
+  position: relative;
+  left: -18px;
+
+  margin-top: 18px;
+}
+
+.description {
+  width: 70%;
+  margin-top: 18px;
+
+  color: #565151;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.doubleArrows {
+  position: absolute;
+  right: 16px;
+  cursor: pointer;
+}
+
+.doubleArrows:hover {
+  animation: right 1s ease infinite forwards;
+}
+
+.doubleArrows.back {
+  right: 80px;
+  transform: translateY(-3px) rotate(180deg);
+}
+
+.doubleArrows.back:hover {
+  animation: rightBack 1s ease infinite forwards;
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightBack {
+  0% {
+    transform: translateX(0) translateY(-3px) rotate(180deg);
+  }
+  25% {
+    transform: translateX(5px) translateY(-3px) rotate(180deg);
+  }
+  50% {
+    transform: translateX(0) translateY(-3px) rotate(180deg);
+  }
+  75% {
+    transform: translateX(5px) translateY(-3px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) translateY(-3px) rotate(180deg);
+  }
+}

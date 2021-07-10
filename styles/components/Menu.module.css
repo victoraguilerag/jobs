@@ -1,0 +1,35 @@
+.menu {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  cursor: pointer;
+  z-index: 2;
+  transition: filter 1s;
+}
+
+.menu.active {
+  filter: invert(1);
+  transition: filter 1s;
+}
+
+.menu:hover {
+  animation: hover 0.4s linear infinite;
+}
+
+@keyframes hover {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate((0));
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

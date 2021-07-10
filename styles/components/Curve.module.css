@@ -1,0 +1,29 @@
+.curve {
+  /* position: absolute; */
+  left: -39px;
+  bottom: 36px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  opacity: 0.8;
+  border-radius: 100%;
+
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+}
+
+.circleTwo {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  opacity: 0.8;
+  border-radius: 100%;
+
+  position: absolute;
+  left: 50px;
+  bottom: -150px;
+}

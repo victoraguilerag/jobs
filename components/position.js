@@ -52,7 +52,7 @@ export default function Position({
             }
             {
                 !first && (
-                <div className={`${styles.doubleArrows} ${styles.back}`} onClick={handleBackClick}>
+                <div className={`${styles.doubleArrows} ${styles.back} ${last ? styles.last : ''}`} onClick={handleBackClick}>
                     <Image src="/double-arrows.svg" width="48px" height="48px" alt="double arrows right" />
                 </div>
                 )

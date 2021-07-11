@@ -101,6 +101,7 @@
 .doubleArrows {
   position: absolute;
   right: 16px;
+  bottom: 44%;
   cursor: pointer;
 }
 
@@ -111,6 +112,10 @@
 .doubleArrows.back {
   right: 80px;
   transform: translateY(-3px) rotate(180deg);
+}
+
+.doubleArrows.back.last {
+  right: 16px;
 }
 
 .doubleArrows.back:hover {

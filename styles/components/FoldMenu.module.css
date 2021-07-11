@@ -1,4 +1,4 @@
-/* .menu {
+.menu {
   position: fixed;
   background: #00d315;
   height: 0;
@@ -6,6 +6,69 @@
   left: 0;
   width: 100vw;
   animation: close 1s ease forwards;
+  overflow: hidden;
+
+  background: #00d315;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  color: transparent;
+  transition: 1s ease color;
+  font-weight: bold;
+  text-align: right;
+}
+
+.menu.active {
+  color: white;
+  transition: 1s ease color;
+}
+
+.menu ul {
+  padding-right: 24px;
+  font-size: 40px;
+  list-style: none;
+  margin: 0 0 16px 0;
+}
+
+.menu ul li {
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: 0.2s color ease;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu ul li:hover {
+  color: #565151;
+}
+
+.menu ul li .icon {
+  position: fixed;
+  left: 25%;
+  bottom: 25%;
+  transform: scale(4);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  width: 64px;
+  height: 64px;
+}
+
+.menu ul li .icon.fixed {
+  opacity: 1;
+  transition: opacity 1s ease 10s;
+}
+
+.menu ul li:hover .icon {
+  opacity: 1;
+  transition: opacity 1s ease 0.3s;
+}
+
+.menu ul p {
+  margin: 0;
+  margin-left: 16px;
 }
 
 .active {
@@ -28,4 +91,4 @@
     height: 0;
     top: 57%;
   }
-} */
+}

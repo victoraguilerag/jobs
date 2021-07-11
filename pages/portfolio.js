@@ -10,7 +10,8 @@ import FoldMenu from '../components/foldMenu';
 import { useEffect, useState } from 'react';
 
 export default function Home({
-    positions
+    positions,
+    sections
 }) {
     const [color, setColor] = useState(0);
     const [observerState, setObserver] = useState(0);
@@ -63,7 +64,11 @@ export default function Home({
                 }
                 {/* {load && (<Curve elements={positions.length} />)} */}
             </main>
-            <FoldMenu active={menu} color={positions[color].color} />
+            <FoldMenu
+                sections={sections}
+                active={menu}
+                color={positions[color].color}
+            />
 
             
         {/* <footer className={styles.footer}>
@@ -77,5 +82,5 @@ Home.getInitialProps = async (ctx) => {
     const res = await fetch('http://localhost:5666/api/positions');
     const json = await res.json()
     console.log(json);
-    return { positions: json.positions }
+    return { positions: json.positions, sections: json.sections }
 }

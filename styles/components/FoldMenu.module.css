@@ -2,7 +2,7 @@
   position: fixed;
   background: #00d315;
   height: 0;
-  top: 57%;
+  top: 0;
   left: 0;
   width: 100vw;
   animation: close 1s ease forwards;
@@ -17,6 +17,7 @@
   transition: 1s ease color;
   font-weight: bold;
   text-align: right;
+  z-index: 3;
 }
 
 .menu.active {
@@ -46,7 +47,7 @@
 }
 
 .menu ul li .icon {
-  position: fixed;
+  position: absolute;
   left: 25%;
   bottom: 25%;
   transform: scale(4);
@@ -72,7 +73,7 @@
 }
 
 .active {
-  animation: open 1s ease forwards;
+  animation: open 0.2s ease-out forwards;
 }
 
 @keyframes open {
@@ -89,6 +90,6 @@
   }
   to {
     height: 0;
-    top: 57%;
+    top: 0;
   }
 }

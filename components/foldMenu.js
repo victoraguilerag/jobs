@@ -15,7 +15,7 @@ const FoldMenu = ({
         <div style={{ background: color }} className={`${styles.menu} ${active ? styles.active : ''}`}>
             <ul>
                 {
-                    sections && sections.map(({ label }, index) => (
+                    active && sections && sections.map(({ label }, index) => (
                         <FoldMenuItem
                             key={label}
                             onHover={handleHover}

@@ -12,9 +12,9 @@
   /* padding: 5rem 0; */
   flex: 1;
   display: flex;
-  flex-flow: row;
-  justify-content: flex-start;
-  align-items: center;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
   position: relative;
 
   width: 100vw;
@@ -108,6 +108,23 @@
   font-size: 1.5rem;
 }
 
+.main h1,
+.main h2 {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.keys {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+
+  padding: 0 32px 8px;
+}
+
 .card p {
   margin: 0;
   font-size: 1.25rem;
@@ -119,6 +136,46 @@
   margin-left: 0.5rem;
 }
 
+.keys {
+  padding-bottom: 8px;
+}
+
+.keyContainer {
+  position: relative;
+  height: 140px;
+  width: 100%;
+}
+
+.key {
+  background: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 4px 4px;
+  box-shadow: inset 0 0 2px rgb(0, 0, 0, 0.3), 0 0 5px rgb(0, 0, 0, 0.7);
+}
+
+.blackKey {
+  background-color: black;
+  width: 50%;
+  height: 65%;
+  position: absolute;
+  top: 0;
+  left: 75%;
+  z-index: 2;
+}
+
+.key:active,
+.key.active,
+.key:focus {
+  background: rgb(111, 23, 235);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.blackKey:active,
+.blackKey.active,
+.blackKey:focus {
+  background: rgb(4, 156, 238);
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;

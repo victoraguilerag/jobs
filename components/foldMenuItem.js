@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/components/FoldMenu.module.css';
 
 import homeAnim from "./icons/home.json";
@@ -22,10 +22,7 @@ const FoldMenuItem = ({
     }
     const handleItemHover = () => onHover(label);
     const handleItemBlur = () => onHover(false);
-    console.log('s')
-    console.log(first)
-    console.log(hover);
-    console.log(label);
+    console.log(active);
     return (
         <li
             onMouseEnter={handleItemHover}
@@ -45,7 +42,12 @@ const FoldMenuItem = ({
                 {label == 'Experiments' && <Lottie animationData={experimentsAnim} />}
                 {/* <Image width="64px" height="64px" src={`/${label}.svg`} alt={label} /> */}
             </div>
-            <p>{label}</p>
+            <Link
+                href={label.toLowerCase()}
+                passHref={true}
+            >
+                <p>{label}</p>
+            </Link>
         </li>
     )
 }

@@ -91,9 +91,10 @@ export default function Home({
     )
 }
 
-Home.getInitialProps = async (ctx) => {
-    const res = await fetch('http://localhost:5666/api/positions');
+Home.getInitialProps = async ({ req }) => {
+    const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+    const label = baseUrl + '/api/positions';
+    const res = await fetch(label);
     const json = await res.json()
-    console.log(json);
     return { positions: json.positions, sections: json.sections }
 }
